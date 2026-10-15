@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lịch họp công ty</title>
+    <style>
+        table {
+            width: 100%;
+            max-width: 700px;
+            border-collapse: collapse;
+            font-family: Arial, sans-serif;
+            margin-top: 15px;
+        }
+
+        th, td {
+            border: 1px solid #333;
+            padding: 10px 14px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #0056b3;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+
+        .highlight {
+            background-color: #e3f2fd;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Lịch họp công ty</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Ngày</th>
+                <th>Giờ</th>
+                <th>Nội dung cuộc họp</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <!-- rowspan="2" gộp 2 hàng lại cho cùng Ngày Thứ Hai -->
+                <td rowspan="2">Thứ Hai (20/10)</td>
+                <td>08:00 - 09:30</td>
+                <td>Họp giao ban đầu tuần</td>
+            </tr>
+            <tr>
+                <td>14:00 - 16:00</td>
+                <td>Đánh giá tiến độ dự án A</td>
+            </tr>
+            <tr>
+                <!-- rowspan="2" gộp 2 hàng lại cho cùng Ngày Thứ Ba -->
+                <td rowspan="2">Thứ Ba (21/10)</td>
+                <!-- colspan="2" gộp 2 cột (Giờ + Nội dung) cho cuộc họp kéo dài cả ngày -->
+                <td colspan="2" class="highlight">08:00 - 17:00: Hội thảo Chiến lược Kinh doanh (Cả ngày)</td>
+            </tr>
+            <tr>
+                <td>18:00 - 19:00</td>
+                <td>Tiệc nhẹ giao lưu đối tác</td>
+            </tr>
+            <tr>
+                <td>Thứ Tư (22/10)</td>
+                <td>09:00 - 11:30</td>
+                <td>Phỏng vấn nhân sự mới</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>
